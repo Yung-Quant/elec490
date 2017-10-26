@@ -45,6 +45,7 @@
 #include "chai3d.h"
 //------------------------------------------------------------------------------
 #include <GLFW/glfw3.h>
+#include <string>
 //------------------------------------------------------------------------------
 using namespace chai3d;
 using namespace std;
@@ -104,8 +105,12 @@ cBackground* background;
 // a font for rendering text
 cFontPtr font;
 
+//global force variable
+cVector3d force;
+
 // a label to display the rate [Hz] at which the simulation is running
 cLabel* labelRates;
+cLabel* labelForce;
 
 // level widget to display interaction forces
 cLevel* level;
@@ -515,6 +520,11 @@ int main(int argc, char* argv[])
     labelRates->m_fontColor.setBlack();
     camera->m_frontLayer->addChild(labelRates);
     
+    //create label for force reporting
+    labelForce = new cLabel(font);
+    labelForce->m_fontColor.setBlack();
+    camera->m_frontLayer->addChild(labelForce);
+    
     // create a dial to display the magnitude of the haptic interaction forces
     level = new cLevel();
     camera->m_frontLayer->addChild(level);
@@ -751,9 +761,13 @@ void updateGraphics(void)
     // update haptic and graphic rate data
     labelRates->setText(cStr(freqCounterGraphics.getFrequency(), 0) + " Hz / " +
                         cStr(freqCounterHaptics.getFrequency(), 0) + " Hz");
+    //labelForce->setText(cStr(force, 0)+"Newtons");
+    string screenForce = "x: "+to_string(force(0)) + " y: "+ to_string(force(1)) + " z: " + to_string(force(2));
+    labelForce->setText(screenForce+ " NEWTONS");
     
     // update position of label
     labelRates->setLocalPos((int)(0.5 * (width - labelRates->getWidth())), 15);
+    labelForce->setLocalPos((int)(0.5 * (width - labelForce->getWidth())), 40);
     
     // update value of level
     level->setValue(tool->getDeviceGlobalForce().length());
@@ -946,7 +960,7 @@ void updateHaptics(void)
             cVector3d toolForce = cNegate(tool->getDeviceGlobalForce());
             
             // compute the effective force that contributes to rotating the object.
-            cVector3d force = toolForce - cProject(toolForce, v);
+            force = toolForce - cProject(toolForce, v);
             
             // compute the resulting torque
             cVector3d torque = cMul(v.length(), cCross( cNormalize(v), force));
