@@ -402,7 +402,7 @@ int main(int argc, char* argv[])
     tool->setShowContactPoints(true, false);
     
     // create a white cursor
-    tool->m_hapticPoint->m_sphereProxy->m_material->setWhite();
+    tool->m_hapticPoint->m_sphereProxy->m_material->setBlack();
     
     // map the physical workspace of the haptic device to a larger virtual workspace.
     tool->setWorkspaceRadius(1.0);
