@@ -1,0 +1,548 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C474C74B1FB0C16300E03D60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C474C74A1FB0C16300E03D60 /* AppDelegate.swift */; };
+		C474C74D1FB0C16300E03D60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C474C74C1FB0C16300E03D60 /* ViewController.swift */; };
+		C474C74F1FB0C16300E03D60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C474C74E1FB0C16300E03D60 /* Assets.xcassets */; };
+		C474C7521FB0C16300E03D60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C474C7501FB0C16300E03D60 /* Main.storyboard */; };
+		C474C75E1FB0C16300E03D60 /* ELEC490HapticSimulatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C474C75D1FB0C16300E03D60 /* ELEC490HapticSimulatorTests.swift */; };
+		C474C7691FB0C16300E03D60 /* ELEC490HapticSimulatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C474C7681FB0C16300E03D60 /* ELEC490HapticSimulatorUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C474C75A1FB0C16300E03D60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C474C73F1FB0C16300E03D60 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C474C7461FB0C16300E03D60;
+			remoteInfo = ELEC490HapticSimulator;
+		};
+		C474C7651FB0C16300E03D60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C474C73F1FB0C16300E03D60 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C474C7461FB0C16300E03D60;
+			remoteInfo = ELEC490HapticSimulator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C474C7471FB0C16300E03D60 /* ELEC490HapticSimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ELEC490HapticSimulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C474C74A1FB0C16300E03D60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C474C74C1FB0C16300E03D60 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C474C74E1FB0C16300E03D60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C474C7511FB0C16300E03D60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C474C7531FB0C16300E03D60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C474C7541FB0C16300E03D60 /* ELEC490HapticSimulator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ELEC490HapticSimulator.entitlements; sourceTree = "<group>"; };
+		C474C7591FB0C16300E03D60 /* ELEC490HapticSimulatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ELEC490HapticSimulatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C474C75D1FB0C16300E03D60 /* ELEC490HapticSimulatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELEC490HapticSimulatorTests.swift; sourceTree = "<group>"; };
+		C474C75F1FB0C16300E03D60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C474C7641FB0C16300E03D60 /* ELEC490HapticSimulatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ELEC490HapticSimulatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C474C7681FB0C16300E03D60 /* ELEC490HapticSimulatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELEC490HapticSimulatorUITests.swift; sourceTree = "<group>"; };
+		C474C76A1FB0C16300E03D60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C474C7441FB0C16300E03D60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C474C7561FB0C16300E03D60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C474C7611FB0C16300E03D60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C474C73E1FB0C16300E03D60 = {
+			isa = PBXGroup;
+			children = (
+				C474C7491FB0C16300E03D60 /* ELEC490HapticSimulator */,
+				C474C75C1FB0C16300E03D60 /* ELEC490HapticSimulatorTests */,
+				C474C7671FB0C16300E03D60 /* ELEC490HapticSimulatorUITests */,
+				C474C7481FB0C16300E03D60 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C474C7481FB0C16300E03D60 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C474C7471FB0C16300E03D60 /* ELEC490HapticSimulator.app */,
+				C474C7591FB0C16300E03D60 /* ELEC490HapticSimulatorTests.xctest */,
+				C474C7641FB0C16300E03D60 /* ELEC490HapticSimulatorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C474C7491FB0C16300E03D60 /* ELEC490HapticSimulator */ = {
+			isa = PBXGroup;
+			children = (
+				C474C74A1FB0C16300E03D60 /* AppDelegate.swift */,
+				C474C74C1FB0C16300E03D60 /* ViewController.swift */,
+				C474C74E1FB0C16300E03D60 /* Assets.xcassets */,
+				C474C7501FB0C16300E03D60 /* Main.storyboard */,
+				C474C7531FB0C16300E03D60 /* Info.plist */,
+				C474C7541FB0C16300E03D60 /* ELEC490HapticSimulator.entitlements */,
+			);
+			path = ELEC490HapticSimulator;
+			sourceTree = "<group>";
+		};
+		C474C75C1FB0C16300E03D60 /* ELEC490HapticSimulatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				C474C75D1FB0C16300E03D60 /* ELEC490HapticSimulatorTests.swift */,
+				C474C75F1FB0C16300E03D60 /* Info.plist */,
+			);
+			path = ELEC490HapticSimulatorTests;
+			sourceTree = "<group>";
+		};
+		C474C7671FB0C16300E03D60 /* ELEC490HapticSimulatorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C474C7681FB0C16300E03D60 /* ELEC490HapticSimulatorUITests.swift */,
+				C474C76A1FB0C16300E03D60 /* Info.plist */,
+			);
+			path = ELEC490HapticSimulatorUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C474C7461FB0C16300E03D60 /* ELEC490HapticSimulator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C474C76D1FB0C16300E03D60 /* Build configuration list for PBXNativeTarget "ELEC490HapticSimulator" */;
+			buildPhases = (
+				C474C7431FB0C16300E03D60 /* Sources */,
+				C474C7441FB0C16300E03D60 /* Frameworks */,
+				C474C7451FB0C16300E03D60 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ELEC490HapticSimulator;
+			productName = ELEC490HapticSimulator;
+			productReference = C474C7471FB0C16300E03D60 /* ELEC490HapticSimulator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C474C7581FB0C16300E03D60 /* ELEC490HapticSimulatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C474C7701FB0C16300E03D60 /* Build configuration list for PBXNativeTarget "ELEC490HapticSimulatorTests" */;
+			buildPhases = (
+				C474C7551FB0C16300E03D60 /* Sources */,
+				C474C7561FB0C16300E03D60 /* Frameworks */,
+				C474C7571FB0C16300E03D60 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C474C75B1FB0C16300E03D60 /* PBXTargetDependency */,
+			);
+			name = ELEC490HapticSimulatorTests;
+			productName = ELEC490HapticSimulatorTests;
+			productReference = C474C7591FB0C16300E03D60 /* ELEC490HapticSimulatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C474C7631FB0C16300E03D60 /* ELEC490HapticSimulatorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C474C7731FB0C16300E03D60 /* Build configuration list for PBXNativeTarget "ELEC490HapticSimulatorUITests" */;
+			buildPhases = (
+				C474C7601FB0C16300E03D60 /* Sources */,
+				C474C7611FB0C16300E03D60 /* Frameworks */,
+				C474C7621FB0C16300E03D60 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C474C7661FB0C16300E03D60 /* PBXTargetDependency */,
+			);
+			name = ELEC490HapticSimulatorUITests;
+			productName = ELEC490HapticSimulatorUITests;
+			productReference = C474C7641FB0C16300E03D60 /* ELEC490HapticSimulatorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C474C73F1FB0C16300E03D60 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Shane Kennedy";
+				TargetAttributes = {
+					C474C7461FB0C16300E03D60 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+					};
+					C474C7581FB0C16300E03D60 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C474C7461FB0C16300E03D60;
+					};
+					C474C7631FB0C16300E03D60 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C474C7461FB0C16300E03D60;
+					};
+				};
+			};
+			buildConfigurationList = C474C7421FB0C16300E03D60 /* Build configuration list for PBXProject "ELEC490HapticSimulator" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C474C73E1FB0C16300E03D60;
+			productRefGroup = C474C7481FB0C16300E03D60 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C474C7461FB0C16300E03D60 /* ELEC490HapticSimulator */,
+				C474C7581FB0C16300E03D60 /* ELEC490HapticSimulatorTests */,
+				C474C7631FB0C16300E03D60 /* ELEC490HapticSimulatorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C474C7451FB0C16300E03D60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C474C74F1FB0C16300E03D60 /* Assets.xcassets in Resources */,
+				C474C7521FB0C16300E03D60 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C474C7571FB0C16300E03D60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C474C7621FB0C16300E03D60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C474C7431FB0C16300E03D60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C474C74D1FB0C16300E03D60 /* ViewController.swift in Sources */,
+				C474C74B1FB0C16300E03D60 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C474C7551FB0C16300E03D60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C474C75E1FB0C16300E03D60 /* ELEC490HapticSimulatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C474C7601FB0C16300E03D60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C474C7691FB0C16300E03D60 /* ELEC490HapticSimulatorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C474C75B1FB0C16300E03D60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C474C7461FB0C16300E03D60 /* ELEC490HapticSimulator */;
+			targetProxy = C474C75A1FB0C16300E03D60 /* PBXContainerItemProxy */;
+		};
+		C474C7661FB0C16300E03D60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C474C7461FB0C16300E03D60 /* ELEC490HapticSimulator */;
+			targetProxy = C474C7651FB0C16300E03D60 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C474C7501FB0C16300E03D60 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C474C7511FB0C16300E03D60 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C474C76B1FB0C16300E03D60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C474C76C1FB0C16300E03D60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		C474C76E1FB0C16300E03D60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ELEC490HapticSimulator/ELEC490HapticSimulator.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ELEC490HapticSimulator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = elec490.ELEC490HapticSimulator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		C474C76F1FB0C16300E03D60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ELEC490HapticSimulator/ELEC490HapticSimulator.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ELEC490HapticSimulator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = elec490.ELEC490HapticSimulator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		C474C7711FB0C16300E03D60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ELEC490HapticSimulatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = elec490.ELEC490HapticSimulatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ELEC490HapticSimulator.app/Contents/MacOS/ELEC490HapticSimulator";
+			};
+			name = Debug;
+		};
+		C474C7721FB0C16300E03D60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ELEC490HapticSimulatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = elec490.ELEC490HapticSimulatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ELEC490HapticSimulator.app/Contents/MacOS/ELEC490HapticSimulator";
+			};
+			name = Release;
+		};
+		C474C7741FB0C16300E03D60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ELEC490HapticSimulatorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = elec490.ELEC490HapticSimulatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = ELEC490HapticSimulator;
+			};
+			name = Debug;
+		};
+		C474C7751FB0C16300E03D60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ELEC490HapticSimulatorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = elec490.ELEC490HapticSimulatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = ELEC490HapticSimulator;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C474C7421FB0C16300E03D60 /* Build configuration list for PBXProject "ELEC490HapticSimulator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C474C76B1FB0C16300E03D60 /* Debug */,
+				C474C76C1FB0C16300E03D60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C474C76D1FB0C16300E03D60 /* Build configuration list for PBXNativeTarget "ELEC490HapticSimulator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C474C76E1FB0C16300E03D60 /* Debug */,
+				C474C76F1FB0C16300E03D60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C474C7701FB0C16300E03D60 /* Build configuration list for PBXNativeTarget "ELEC490HapticSimulatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C474C7711FB0C16300E03D60 /* Debug */,
+				C474C7721FB0C16300E03D60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C474C7731FB0C16300E03D60 /* Build configuration list for PBXNativeTarget "ELEC490HapticSimulatorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C474C7741FB0C16300E03D60 /* Debug */,
+				C474C7751FB0C16300E03D60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C474C73F1FB0C16300E03D60 /* Project object */;
+}

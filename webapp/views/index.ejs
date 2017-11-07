@@ -1,0 +1,47 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>ELEC490 Haptic Simulator</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+<link rel="stylesheet" href="styles.css" >
+</head>
+<body>
+
+<div class="container" id="title">
+	<h1 style="font-size: 72px;">Novint Falcon Haptic Simulator</h1>
+</div>
+<div class="container" id="op_dd">
+	<div class="dropdown">
+		<label for="dropdownMenuButton" style="font-size: 36px;"><strong>Please select which operation to simulate:</strong> </label>
+	  <button class="btn-lg btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	    Operations
+	  </button>
+	  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+	    <button class="dropdown-item" type="button" onclick="setOp(this.innerHTML)">Breast Palpation</button>
+	  </div>
+	</div>
+</div>
+
+<img src="startButton.png" heigh="300" width="300" id="start" onclick="tutorial()">
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<script type="text/javascript">
+	var operation = null;
+	function setOp(text){
+		$("#dropdownMenuButton")[0].innerHTML = text;
+		operation = text.replace(' ','');
+	}
+	function tutorial(){
+		if(operation!=null){
+			var path = '/'+operation+'/tutorial';
+			window.location.href = path;
+		}
+	}
+</script>
+</body>
+</html> 
