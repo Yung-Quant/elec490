@@ -46,6 +46,8 @@
 //------------------------------------------------------------------------------
 #include <GLFW/glfw3.h>
 #include <string>
+#include <cmath>
+#include <math.h>
 //------------------------------------------------------------------------------
 using namespace chai3d;
 using namespace std;
@@ -107,6 +109,7 @@ cFontPtr font;
 
 //global force variable
 cVector3d force;
+cVector3d toolForce;
 
 // a label to display the rate [Hz] at which the simulation is running
 cLabel* labelRates;
@@ -327,8 +330,8 @@ int main(int argc, char* argv[])
     
     // define a basis in spherical coordinates for the camera
     camera->setSphericalReferences(cVector3d(0,0,0),    // origin
-                                   cVector3d(0,0,1),    // zenith direction
-                                   cVector3d(1,0,0));   // azimuth direction
+                                   cVector3d(0,0,0),    // zenith direction
+                                   cVector3d(0,0,0));   // azimuth direction
     
     camera->setSphericalDeg(1.0,    // spherical coordinate radius
                             65,     // spherical coordinate polar angle
@@ -438,11 +441,11 @@ int main(int argc, char* argv[])
     
     // load an object file
     bool fileload;
-    fileload = object->loadFromFile(RESOURCE_PATH("../resources/models/femur/femur.stl"));
+    fileload = object->loadFromFile(RESOURCE_PATH("../resources/models/female/female.obj"));
     if (!fileload)
     {
 #if defined(_MSVC)
-        fileload = object->loadFromFile("../../../bin/resources/models/femur/femur.stl");
+        fileload = object->loadFromFile("../../../bin/resources/models/female/female.obj");
 #endif
     }
     if (!fileload)
@@ -762,8 +765,9 @@ void updateGraphics(void)
     labelRates->setText(cStr(freqCounterGraphics.getFrequency(), 0) + " Hz / " +
                         cStr(freqCounterHaptics.getFrequency(), 0) + " Hz");
     //labelForce->setText(cStr(force, 0)+"Newtons");
-    string screenForce = "x: "+to_string(force(0)) + " y: "+ to_string(force(1)) + " z: " + to_string(force(2));
-    labelForce->setText(screenForce+ " NEWTONS");
+    double magForce = sqrt(pow(toolForce(0),2) + pow(toolForce(1),2) + pow(toolForce(2),2));
+    string screenForce = "x: "+to_string(toolForce(0)) + " y: "+ to_string(toolForce(1)) + " z: " + to_string(toolForce(2));
+    labelForce->setText(screenForce + " ---> " + to_string(magForce)+ " NEWTONS");
     
     // update position of label
     labelRates->setLocalPos((int)(0.5 * (width - labelRates->getWidth())), 15);
@@ -771,6 +775,7 @@ void updateGraphics(void)
     
     // update value of level
     level->setValue(tool->getDeviceGlobalForce().length());
+    level->setValue(magForce);
     
     
     /////////////////////////////////////////////////////////////////////
@@ -957,7 +962,7 @@ void updateHaptics(void)
             // get the last force applied to the cursor in global coordinates
             // we negate the result to obtain the opposite force that is applied on the
             // object
-            cVector3d toolForce = cNegate(tool->getDeviceGlobalForce());
+            toolForce = cNegate(tool->getDeviceGlobalForce());
             
             // compute the effective force that contributes to rotating the object.
             force = toolForce - cProject(toolForce, v);
