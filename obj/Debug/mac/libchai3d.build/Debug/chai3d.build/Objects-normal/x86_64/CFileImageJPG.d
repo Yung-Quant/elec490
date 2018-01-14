@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/shanekennedy/Documents/Queens/4thYear/elec490/src/files/CFileImageJPG.cpp \
+  /Users/EmilyHeffernan/Desktop/elec490/src/files/CFileImageJPG.cpp \
   src/files/CFileImageJPG.h src/graphics/CImage.h src/graphics/CColor.h \
   src/math/CMaths.h src/math/CTransform.h src/math/CMatrix3d.h \
   src/math/CConstants.h src/system/CGlobals.h external/Eigen/Eigen/Eigen \

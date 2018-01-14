@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/shanekennedy/Documents/Queens/4thYear/elec490/src/collisions/CCollisionBrute.cpp \
+  /Users/EmilyHeffernan/Desktop/elec490/src/collisions/CCollisionBrute.cpp \
   src/collisions/CCollisionBrute.h src/collisions/CGenericCollision.h \
   src/collisions/CCollisionBasics.h src/math/CVector3d.h \
   src/system/CString.h src/system/CGlobals.h src/math/CConstants.h \

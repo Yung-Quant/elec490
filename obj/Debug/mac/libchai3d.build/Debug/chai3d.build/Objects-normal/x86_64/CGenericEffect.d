@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/shanekennedy/Documents/Queens/4thYear/elec490/src/effects/CGenericEffect.cpp \
+  /Users/EmilyHeffernan/Desktop/elec490/src/effects/CGenericEffect.cpp \
   src/effects/CGenericEffect.h src/math/CVector3d.h src/system/CString.h \
   src/system/CGlobals.h src/math/CConstants.h external/Eigen/Eigen/Eigen \
   external/Eigen/Eigen/Dense external/Eigen/Eigen/Core \

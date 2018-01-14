@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/shanekennedy/Documents/Queens/4thYear/elec490/src/graphics/CMultiImage.cpp \
-  /Users/shanekennedy/Documents/Queens/4thYear/elec490/src/graphics/CMultiImage.h \
+  /Users/EmilyHeffernan/Desktop/elec490/src/graphics/CMultiImage.cpp \
+  /Users/EmilyHeffernan/Desktop/elec490/src/graphics/CMultiImage.h \
   src/graphics/CImage.h src/graphics/CColor.h src/math/CMaths.h \
   src/math/CTransform.h src/math/CMatrix3d.h src/math/CConstants.h \
   src/system/CGlobals.h external/Eigen/Eigen/Eigen \

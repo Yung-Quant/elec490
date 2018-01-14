@@ -418,11 +418,11 @@ int main(int argc, char* argv[])
     deviceRadius = 0.12;
     device = new cShapeSphere(deviceRadius);
     world->addChild(device);
-    device->m_material->setWhite();
-    device->m_material->setShininess(100);
+    device->m_material->setBlack();
+    device->m_material->setShininess(50);
 
     // interaction stiffness between tool and deformable model 
-    stiffness = 10;
+    stiffness = 20;
 
 
     //-----------------------------------------------------------------------
@@ -437,7 +437,7 @@ int main(int argc, char* argv[])
     /////////////////////////////////////////////////////////////////////////
     // COMPOSE WATER BED
     /////////////////////////////////////////////////////////////////////////
-
+/*
     // create GEL mesh object
     ground = new cGELMesh();
 
@@ -487,11 +487,11 @@ int main(int argc, char* argv[])
     {
         for (int u=0; u<RESOLUTION; u++)
         {
-            if ((u == 0) || (v == 0) || (u == (RESOLUTION-1)) || (v == (RESOLUTION-1)))
-            {
+            //if ((u == 0) || (v == 0) || (u == (RESOLUTION-1)) || (v == (RESOLUTION-1)))
+            //{
                 unsigned int index = ((v + 0) * RESOLUTION) + (u + 0);
                 ground->m_gelVertices[index].m_massParticle->m_fixed = true;
-            }
+            //}
         }
     }
 
@@ -545,7 +545,9 @@ int main(int argc, char* argv[])
     ground->setUseTexture(true, true);
     
     // load water texture
+ */
     bool fileload;
+    /*
     fileload = textureGround->loadFromFile(RESOURCE_PATH("../resources/images/water.jpg"));
     if (!fileload)
     {
@@ -559,11 +561,12 @@ int main(int argc, char* argv[])
             return (-1);
         }
     }
+ 
 
     // enable environmental texturing
     textureGround->setEnvironmentMode(GL_DECAL);
     textureGround->setSphericalMappingEnabled(true);
-    
+ */
 
     /////////////////////////////////////////////////////////////////////////
     // CREATE DUCK
@@ -576,11 +579,11 @@ int main(int argc, char* argv[])
     defWorld->m_gelMeshes.push_back(defObject);
     
     // create a skeleton composed of mass particles
-    fileload = createSkeletonMesh(defObject, RESOURCE_PATH("../resources/models/ducky/duck-200.off"), RESOURCE_PATH("../resources/models/ducky/duck-full.obj"));
+    fileload = createSkeletonMesh(defObject, RESOURCE_PATH("../resources/models/small/small-200.off"), RESOURCE_PATH("../resources/models/small/small-full.obj"));
     if (!fileload)
     {
 #if defined(_MSVC)
-        fileload = createSkeletonMesh(defObject, "../../../bin/resources/models/ducky/duck-200.off", "../../../bin/resources/models/ducky/duck-full.obj");
+        fileload = createSkeletonMesh(defObject, "../../../bin/resources/models/small/small-200.off", "../../../bin/resources/models/small/small-full.obj");
 #endif
         if (!fileload)
         {
@@ -589,8 +592,21 @@ int main(int argc, char* argv[])
             return (-1);
         }
     }
-
-
+    /*
+    defObject->m_texture = cTexture2d::create();
+    defObject->setUseTexture(true);
+    fileload = defObject->m_texture->loadFromFile(RESOURCE_PATH("../resources/images/boobPic.png"));
+    if (!fileload)
+    {
+#if defined(_MSVC)
+        fileload = defObject->m_texture->loadFromFile("../../../bin/resources/images/boobPic.png");
+#endif
+    }
+    
+    defObject->m_texture = cTexture2d::create();
+    defObject->setUseTexture(true);
+    */
+    
     //--------------------------------------------------------------------------
     // WIDGETS
     //--------------------------------------------------------------------------
@@ -607,11 +623,11 @@ int main(int argc, char* argv[])
     cBackground* background = new cBackground();
     camera->m_backLayer->addChild(background);
 
-    fileload = background->loadFromFile(RESOURCE_PATH("../resources/images/stone.jpg"));
+    fileload = background->loadFromFile(RESOURCE_PATH("../resources/images/hospitalGown.png"));
     if (!fileload)
     {
 #if defined(_MSVC)
-        fileload = background->loadFromFile("../../../bin/resources/images/stone.jpg");
+        fileload = background->loadFromFile("../../../bin/resources/images/hospitalGown.png");
 #endif
     }
     if (!fileload)
@@ -800,7 +816,7 @@ bool createSkeletonMesh(cGELMesh *a_object, char *a_filename, char *a_filenameHi
         }
 
         // setup default values for links
-        cGELSkeletonLink::s_default_kSpringElongation = 100.0; // [N/m]
+        cGELSkeletonLink::s_default_kSpringElongation = 50.0; // [N/m]
         cGELSkeletonLink::s_default_kSpringFlexion    = 0.1;   // [Nm/RAD]
         cGELSkeletonLink::s_default_kSpringTorsion    = 0.1;   // [Nm/RAD]
         cGELSkeletonLink::s_default_color.set(0.2, 0.2, 1.0);

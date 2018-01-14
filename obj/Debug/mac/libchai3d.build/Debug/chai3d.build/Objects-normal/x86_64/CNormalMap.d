@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/shanekennedy/Documents/Queens/4thYear/elec490/src/materials/CNormalMap.cpp \
+  /Users/EmilyHeffernan/Desktop/elec490/src/materials/CNormalMap.cpp \
   src/materials/CNormalMap.h src/materials/CTexture2d.h \
   src/graphics/CColor.h src/math/CMaths.h src/math/CTransform.h \
   src/math/CMatrix3d.h src/math/CConstants.h src/system/CGlobals.h \

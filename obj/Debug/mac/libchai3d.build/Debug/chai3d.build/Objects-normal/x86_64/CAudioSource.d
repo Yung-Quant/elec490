@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/shanekennedy/Documents/Queens/4thYear/elec490/src/audio/CAudioSource.cpp \
+  /Users/EmilyHeffernan/Desktop/elec490/src/audio/CAudioSource.cpp \
   external/openal/include/AL/al.h external/openal/include/AL/alc.h \
   src/audio/CAudioSource.h src/audio/CAudioBuffer.h src/math/CMaths.h \
   src/math/CTransform.h src/math/CMatrix3d.h src/math/CConstants.h \

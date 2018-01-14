@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/shanekennedy/Documents/Queens/4thYear/elec490/src/widgets/CBackground.cpp \
+  /Users/EmilyHeffernan/Desktop/elec490/src/widgets/CBackground.cpp \
   src/widgets/CBackground.h src/widgets/CBitmap.h src/widgets/CPanel.h \
   src/widgets/CGenericWidget.h src/world/CMesh.h \
   src/world/CGenericObject.h src/collisions/CCollisionBasics.h \

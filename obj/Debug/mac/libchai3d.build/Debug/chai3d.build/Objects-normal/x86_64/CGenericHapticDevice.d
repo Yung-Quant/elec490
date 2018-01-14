@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/shanekennedy/Documents/Queens/4thYear/elec490/src/devices/CGenericHapticDevice.cpp \
+  /Users/EmilyHeffernan/Desktop/elec490/src/devices/CGenericHapticDevice.cpp \
   src/devices/CGenericHapticDevice.h src/devices/CGenericDevice.h \
   src/math/CConstants.h src/system/CGlobals.h external/Eigen/Eigen/Eigen \
   external/Eigen/Eigen/Dense external/Eigen/Eigen/Core \

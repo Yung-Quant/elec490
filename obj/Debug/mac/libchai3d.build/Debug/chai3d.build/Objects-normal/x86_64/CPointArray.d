@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/shanekennedy/Documents/Queens/4thYear/elec490/src/graphics/CPointArray.cpp \
+  /Users/EmilyHeffernan/Desktop/elec490/src/graphics/CPointArray.cpp \
   src/graphics/CPointArray.h src/graphics/CGenericArray.h \
   src/math/CGeometry.h src/math/CPolySolver.h src/math/CMaths.h \
   src/math/CTransform.h src/math/CMatrix3d.h src/math/CConstants.h \

@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/shanekennedy/Documents/Queens/4thYear/elec490/src/widgets/CLabel.cpp \
-  /Users/shanekennedy/Documents/Queens/4thYear/elec490/src/widgets/CLabel.h \
+  /Users/EmilyHeffernan/Desktop/elec490/src/widgets/CLabel.cpp \
+  /Users/EmilyHeffernan/Desktop/elec490/src/widgets/CLabel.h \
   src/widgets/CPanel.h src/widgets/CGenericWidget.h src/world/CMesh.h \
   src/world/CGenericObject.h src/collisions/CCollisionBasics.h \
   src/math/CVector3d.h src/system/CString.h src/system/CGlobals.h \

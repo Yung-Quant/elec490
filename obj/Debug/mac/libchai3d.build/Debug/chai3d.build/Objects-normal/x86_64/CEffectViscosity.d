@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/shanekennedy/Documents/Queens/4thYear/elec490/src/effects/CEffectViscosity.cpp \
+  /Users/EmilyHeffernan/Desktop/elec490/src/effects/CEffectViscosity.cpp \
   src/effects/CEffectViscosity.h src/effects/CGenericEffect.h \
   src/math/CVector3d.h src/system/CString.h src/system/CGlobals.h \
   src/math/CConstants.h external/Eigen/Eigen/Eigen \

@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/shanekennedy/Documents/Queens/4thYear/elec490/src/devices/CHapticDeviceHandler.cpp \
+  /Users/EmilyHeffernan/Desktop/elec490/src/devices/CHapticDeviceHandler.cpp \
   src/devices/CHapticDeviceHandler.h src/devices/CGenericHapticDevice.h \
   src/devices/CGenericDevice.h src/math/CConstants.h \
   src/system/CGlobals.h external/Eigen/Eigen/Eigen \

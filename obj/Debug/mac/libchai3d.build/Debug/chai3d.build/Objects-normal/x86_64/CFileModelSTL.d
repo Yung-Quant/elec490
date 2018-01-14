@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/shanekennedy/Documents/Queens/4thYear/elec490/src/files/CFileModelSTL.cpp \
+  /Users/EmilyHeffernan/Desktop/elec490/src/files/CFileModelSTL.cpp \
   src/files/CFileModelSTL.h src/world/CMultiMesh.h src/world/CMesh.h \
   src/world/CGenericObject.h src/collisions/CCollisionBasics.h \
   src/math/CVector3d.h src/system/CString.h src/system/CGlobals.h \

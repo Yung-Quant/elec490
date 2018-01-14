@@ -1,4 +1,4 @@
 dependencies: \
-  /Users/shanekennedy/Documents/Queens/4thYear/elec490/external/lib3ds/src/lib3ds_shadow.c \
-  /Users/shanekennedy/Documents/Queens/4thYear/elec490/external/lib3ds/include/lib3ds_impl.h \
+  /Users/EmilyHeffernan/Desktop/elec490/external/lib3ds/src/lib3ds_shadow.c \
+  /Users/EmilyHeffernan/Desktop/elec490/external/lib3ds/include/lib3ds_impl.h \
   include/lib3ds.h

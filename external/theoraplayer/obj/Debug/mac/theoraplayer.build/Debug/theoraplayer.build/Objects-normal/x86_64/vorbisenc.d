@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/shanekennedy/Documents/Queens/4thYear/elec490/external/theoraplayer/external/vorbis/lib/vorbisenc.c \
+  /Users/EmilyHeffernan/Desktop/elec490/external/theoraplayer/external/vorbis/lib/vorbisenc.c \
   external/vorbis/include/vorbis/codec.h external/ogg/include/ogg/ogg.h \
   external/ogg/include/ogg/os_types.h \
   external/vorbis/include/vorbis/vorbisenc.h \

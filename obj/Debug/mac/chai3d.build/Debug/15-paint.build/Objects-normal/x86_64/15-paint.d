@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/shanekennedy/Documents/Queens/4thYear/elec490/examples/GLFW/15-paint/15-paint.cpp \
+  /Users/EmilyHeffernan/Desktop/elec490/examples/GLFW/15-paint/15-paint.cpp \
   src/chai3d.h src/audio/CAudioBuffer.h src/math/CMaths.h \
   src/math/CTransform.h src/math/CMatrix3d.h src/math/CConstants.h \
   src/system/CGlobals.h external/Eigen/Eigen/Eigen \
