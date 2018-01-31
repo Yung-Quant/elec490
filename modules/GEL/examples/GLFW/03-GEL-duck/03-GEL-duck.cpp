@@ -423,7 +423,7 @@ int main(int argc, char* argv[])
     device->m_material->setShininess(50);
 
     // interaction stiffness between tool and deformable model 
-    stiffness = 50;
+    stiffness = 20;
 
 
     //-----------------------------------------------------------------------
@@ -765,8 +765,8 @@ bool createSkeletonMesh(cGELMesh *a_object, char *a_filename, char *a_filenameHi
 
         // setup default values for nodes
         cGELSkeletonNode::s_default_radius        = 0.05;
-        cGELSkeletonNode::s_default_kDampingPos   = 0.3;
-        cGELSkeletonNode::s_default_kDampingRot   = 0.1;
+        cGELSkeletonNode::s_default_kDampingPos   = 0.03;
+        cGELSkeletonNode::s_default_kDampingRot   = 0.01;
         cGELSkeletonNode::s_default_mass          = 0.002;  // [kg]
         cGELSkeletonNode::s_default_showFrame     = true;
         cGELSkeletonNode::s_default_color.set(1.0, 0.6, 0.6);
@@ -792,7 +792,7 @@ bool createSkeletonMesh(cGELMesh *a_object, char *a_filename, char *a_filenameHi
                 newNode->m_pos = mesh->m_vertices->getLocalPos(vertexIndex);
                 newNode->m_rot.identity();
                 newNode->m_radius = 0.1;
-                newNode->m_fixed = true;
+                newNode->m_fixed = false;
                 mesh->m_vertices->setUserData(vertexIndex, i);
                 i++;
                 nodes.push_back(newNode);
@@ -817,9 +817,9 @@ bool createSkeletonMesh(cGELMesh *a_object, char *a_filename, char *a_filenameHi
         }
 
         // setup default values for links
-        cGELSkeletonLink::s_default_kSpringElongation = 50.0; // [N/m]
-        cGELSkeletonLink::s_default_kSpringFlexion    = 0.1;   // [Nm/RAD]
-        cGELSkeletonLink::s_default_kSpringTorsion    = 0.1;   // [Nm/RAD]
+        cGELSkeletonLink::s_default_kSpringElongation = 10.0; // [N/m] was 50
+        cGELSkeletonLink::s_default_kSpringFlexion    = 0.01;   // [Nm/RAD]
+        cGELSkeletonLink::s_default_kSpringTorsion    = 0.01;   // [Nm/RAD]
         cGELSkeletonLink::s_default_color.set(0.2, 0.2, 1.0);
 
         for (set< pair<int,int> >::iterator it = springs.begin(); it != springs.end(); ++it)
@@ -844,7 +844,7 @@ bool createSkeletonMesh(cGELMesh *a_object, char *a_filename, char *a_filenameHi
         mat.m_diffuse.set(0.8, 0.8, 0.8);
         mat.m_specular.set(0.0, 0.0, 0.0);
         mat.setOrangeLightSalmon();
-        mat.setStiffness(3.25);
+        mat.setStiffness(0.5); //was 3.25
         a_object->setMaterial(mat, true);
 
         // cleanup
