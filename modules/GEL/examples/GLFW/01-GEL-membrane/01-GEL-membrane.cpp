@@ -400,11 +400,11 @@ int main(int argc, char* argv[])
 
     // load model
     bool fileload;
-    fileload = defObject->loadFromFile(RESOURCE_PATH("../resources/models/box/box.obj"));
+    fileload = defObject->loadFromFile(RESOURCE_PATH("../resources/models/Breasts/simple-full.obj"));
     if (!fileload)
     {
         #if defined(_MSVC)
-        fileload = defObject->loadFromFile("../../../bin/resources/models/box/box.obj");
+        fileload = defObject->loadFromFile("../../../bin/resources/models/Breasts/simple-full.obj");
         #endif
     }
     if (!fileload)

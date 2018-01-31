@@ -1,3 +1,3 @@
 import os
 
-os.system("../bin/mac-x86_64/21-object")
+os.system("../modules/GEL/bin/mac-x86_64/03-GEL-duck")

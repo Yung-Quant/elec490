@@ -419,11 +419,11 @@ int main(int argc, char* argv[])
     defObject = new cGELMesh();
     defWorld->m_gelMeshes.push_front(defObject);
     bool fileload;
-    fileload = defObject->loadFromFile(RESOURCE_PATH("../resources/models/cell/cell.obj"));
+    fileload = defObject->loadFromFile(RESOURCE_PATH("../resources/models/Breasts/boob.obj"));
     if (!fileload)
     {
         #if defined(_MSVC)
-        fileload = defObject->loadFromFile("../../../bin/resources/models/cell/cell.obj");
+        fileload = defObject->loadFromFile("../../../bin/resources/models/Breasts/boob.obj");
         #endif
     }
     if (!fileload)
@@ -448,7 +448,7 @@ int main(int argc, char* argv[])
     // to scale to the desired size.
     if (size > 0)
     {
-        double scaleFactor = 1.0 / size;
+        double scaleFactor = (1.0 / (size));
         defObject->scale(scaleFactor);
     }
 
@@ -460,7 +460,7 @@ int main(int argc, char* argv[])
     cGELSkeletonNode::s_default_kDampingPos   = 0.4;
     cGELSkeletonNode::s_default_kDampingRot   = 0.1;
     cGELSkeletonNode::s_default_mass          = 0.06;  // [kg]
-    cGELSkeletonNode::s_default_showFrame     = false;
+    cGELSkeletonNode::s_default_showFrame     = true;
     cGELSkeletonNode::s_default_color.set(0.6, 0.6, 0.0);
     cGELSkeletonNode::s_default_useGravity      = false;
     cGELSkeletonNode::s_default_gravity.set(0.00, 0.00, -1.00);
@@ -482,13 +482,13 @@ int main(int argc, char* argv[])
     defObject->connectVerticesToSkeleton(true);
 
     // show/hide underlying dynamic skeleton model
-    defObject->m_showSkeletonModel = false;
+    defObject->m_showSkeletonModel = true;
 
     // use internal skeleton as deformable model
     defObject->m_useSkeletonModel = true;
 
     // create anchors
-    cGELSkeletonLink::s_default_kSpringElongation = 5.0; // [N/m]
+    cGELSkeletonLink::s_default_kSpringElongation = 50.0; // [N/m]
     list<cGELSkeletonNode*>::iterator i;
     int num = 0;
     for(i = defObject->m_nodes.begin(); i != defObject->m_nodes.end(); ++i)

@@ -440,6 +440,7 @@
 				9685B5E91E073A120033471B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -177,6 +177,18 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		DBCE105320224DD6003A093B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		962E5EEC14C52C26008E447A /* libchai3d-GEL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "libchai3d-GEL.xcodeproj"; sourceTree = "<group>"; };
 		9655D47C17549C0500E47F24 /* libdrd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libdrd.a; path = ../../external/DHD/lib/mac/libdrd.a; sourceTree = "<group>"; };
@@ -202,6 +214,7 @@
 		96D0116914E3713C00446A6B /* 01-GEL-membrane */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "01-GEL-membrane"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96D0118414E372C600446A6B /* 02-GEL-cell */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "02-GEL-cell"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96D0119D14E3735000446A6B /* 03-GEL-duck */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "03-GEL-duck"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBCE105520224DD6003A093B /* 04-GEL-breastSim */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "04-GEL-breastSim"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +278,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DBCE105220224DD6003A093B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -288,6 +308,7 @@
 				96D0116914E3713C00446A6B /* 01-GEL-membrane */,
 				96D0118414E372C600446A6B /* 02-GEL-cell */,
 				96D0119D14E3735000446A6B /* 03-GEL-duck */,
+				DBCE105520224DD6003A093B /* 04-GEL-breastSim */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -311,6 +332,7 @@
 		9662C0EB0FC0182300177FFC /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				DBCE103E20224C41003A093B /* 04-GEL-breastSim */,
 				96D0117314E371F000446A6B /* 01-GEL-membrane */,
 				96D0117F14E3729900446A6B /* 02-GEL-cell */,
 				96D011A714E3735D00446A6B /* 03-GEL-duck */,
@@ -387,6 +409,13 @@
 			name = "03-GEL-duck";
 			sourceTree = "<group>";
 		};
+		DBCE103E20224C41003A093B /* 04-GEL-breastSim */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "04-GEL-breastSim";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -450,6 +479,23 @@
 			productReference = 96D0119D14E3735000446A6B /* 03-GEL-duck */;
 			productType = "com.apple.product-type.tool";
 		};
+		DBCE105420224DD6003A093B /* 04-GEL-breastSim */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBCE105920224DD6003A093B /* Build configuration list for PBXNativeTarget "04-GEL-breastSim" */;
+			buildPhases = (
+				DBCE105120224DD6003A093B /* Sources */,
+				DBCE105220224DD6003A093B /* Frameworks */,
+				DBCE105320224DD6003A093B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "04-GEL-breastSim";
+			productName = "04-GEL-breastSim";
+			productReference = DBCE105520224DD6003A093B /* 04-GEL-breastSim */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -457,6 +503,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0800;
+				TargetAttributes = {
+					DBCE105420224DD6003A093B = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = 1DEB91EF08733DB70010E9CD /* Build configuration list for PBXProject "chai3d-GEL" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -490,6 +542,7 @@
 				96D0116814E3713C00446A6B /* 01-GEL-membrane */,
 				96D0118314E372C600446A6B /* 02-GEL-cell */,
 				96D0119C14E3735000446A6B /* 03-GEL-duck */,
+				DBCE105420224DD6003A093B /* 04-GEL-breastSim */,
 			);
 		};
 /* End PBXProject section */
@@ -584,6 +637,13 @@
 				967069631500C462001F52FA /* 03-GEL-duck.cpp in Sources */,
 				967069641500C462001F52FA /* predicates.cpp in Sources */,
 				967069651500C462001F52FA /* tetgen.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBCE105120224DD6003A093B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -850,6 +910,58 @@
 			};
 			name = Release;
 		};
+		DBCE105A20224DD6003A093B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DBCE105B20224DD6003A093B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -894,6 +1006,15 @@
 			buildConfigurations = (
 				96D011A514E3735000446A6B /* Debug */,
 				96D011A614E3735000446A6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBCE105920224DD6003A093B /* Build configuration list for PBXNativeTarget "04-GEL-breastSim" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBCE105A20224DD6003A093B /* Debug */,
+				DBCE105B20224DD6003A093B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

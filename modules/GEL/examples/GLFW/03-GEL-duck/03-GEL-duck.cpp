@@ -46,6 +46,7 @@
 #include "chai3d.h"
 #include "GEL3D.h"
 #include "tetgen.h"
+#include "cMaterial.h"
 #include <set>
 //------------------------------------------------------------------------------
 #include <GLFW/glfw3.h>
@@ -422,7 +423,7 @@ int main(int argc, char* argv[])
     device->m_material->setShininess(50);
 
     // interaction stiffness between tool and deformable model 
-    stiffness = 20;
+    stiffness = 50;
 
 
     //-----------------------------------------------------------------------
@@ -579,11 +580,11 @@ int main(int argc, char* argv[])
     defWorld->m_gelMeshes.push_back(defObject);
     
     // create a skeleton composed of mass particles
-    fileload = createSkeletonMesh(defObject, RESOURCE_PATH("../resources/models/small/small-200.off"), RESOURCE_PATH("../resources/models/small/small-full.obj"));
+    fileload = createSkeletonMesh(defObject, RESOURCE_PATH("../resources/models/simple/simple-200.off"), RESOURCE_PATH("../resources/models/simple/simple-full.obj"));
     if (!fileload)
     {
 #if defined(_MSVC)
-        fileload = createSkeletonMesh(defObject, "../../../bin/resources/models/small/small-200.off", "../../../bin/resources/models/small/small-full.obj");
+        fileload = createSkeletonMesh(defObject, "../../../bin/resources/models/simple/simple-200.off", "../../../bin/resources/models/simple/simple-full.obj");
 #endif
         if (!fileload)
         {
@@ -694,7 +695,7 @@ int main(int argc, char* argv[])
 bool createSkeletonMesh(cGELMesh *a_object, char *a_filename, char *a_filenameHighRes)
 {
     a_object->m_useSkeletonModel = true;
-    a_object->m_useMassParticleModel = false;
+    a_object->m_useMassParticleModel = false; //should be false
     a_object->loadFromFile(a_filenameHighRes);
 
     cGELMesh* model = new cGELMesh();
@@ -767,7 +768,7 @@ bool createSkeletonMesh(cGELMesh *a_object, char *a_filename, char *a_filenameHi
         cGELSkeletonNode::s_default_kDampingPos   = 0.3;
         cGELSkeletonNode::s_default_kDampingRot   = 0.1;
         cGELSkeletonNode::s_default_mass          = 0.002;  // [kg]
-        cGELSkeletonNode::s_default_showFrame     = false;
+        cGELSkeletonNode::s_default_showFrame     = true;
         cGELSkeletonNode::s_default_color.set(1.0, 0.6, 0.6);
         cGELSkeletonNode::s_default_useGravity    = true;
         cGELSkeletonNode::s_default_gravity.set(0.00, 0.00, -3.45);
@@ -791,7 +792,7 @@ bool createSkeletonMesh(cGELMesh *a_object, char *a_filename, char *a_filenameHi
                 newNode->m_pos = mesh->m_vertices->getLocalPos(vertexIndex);
                 newNode->m_rot.identity();
                 newNode->m_radius = 0.1;
-                newNode->m_fixed = false;
+                newNode->m_fixed = true;
                 mesh->m_vertices->setUserData(vertexIndex, i);
                 i++;
                 nodes.push_back(newNode);
@@ -842,6 +843,8 @@ bool createSkeletonMesh(cGELMesh *a_object, char *a_filename, char *a_filenameHi
         mat.m_ambient.set(0.7, 0.7, 0.7);
         mat.m_diffuse.set(0.8, 0.8, 0.8);
         mat.m_specular.set(0.0, 0.0, 0.0);
+        mat.setOrangeLightSalmon();
+        mat.setStiffness(3.25);
         a_object->setMaterial(mat, true);
 
         // cleanup

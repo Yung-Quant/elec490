@@ -441,11 +441,11 @@ int main(int argc, char* argv[])
     
     // load an object file
     bool fileload;
-    fileload = object->loadFromFile(RESOURCE_PATH("../resources/models/breast_cancer/breast_cancer.3ds"));
+    fileload = object->loadFromFile(RESOURCE_PATH("../resources/models/breasts/boob.3ds"));
     if (!fileload)
     {
 #if defined(_MSVC)
-        fileload = object->loadFromFile("../../../bin/resources/models/breast_cancer/breast_cancer.3ds");
+        fileload = object->loadFromFile("../../../bin/resources/models/breasts/boob.3ds");
 #endif
     }
     if (!fileload)
