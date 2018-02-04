@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/EmilyHeffernan/Desktop/elec490/modules/GEL/examples/GLFW/03-GEL-duck/03-GEL-duck.cpp \
+  /Users/shanekennedy/Documents/elec490/modules/GEL/examples/GLFW/03-GEL-duck/03-GEL-duck.cpp \
   ../../src/chai3d.h ../../src/audio/CAudioBuffer.h \
   ../../src/math/CMaths.h ../../src/math/CTransform.h \
   ../../src/math/CMatrix3d.h ../../src/math/CConstants.h \
@@ -237,6 +237,6 @@ dependencies: \
   ../../src/resources/CShaderIsosurface-RGBA8.h src/GEL3D.h \
   src/CGELMassParticle.h src/CGELLinearSpring.h src/CGELSkeletonNode.h \
   src/CGELSkeletonLink.h src/CGELVertex.h src/CGELMesh.h src/CGELWorld.h \
-  /Users/EmilyHeffernan/Desktop/elec490/modules/GEL/examples/GLFW/03-GEL-duck/tetgen.h \
-  /Users/EmilyHeffernan/Desktop/elec490/modules/GEL/examples/GLFW/03-GEL-duck/cMaterial.h \
+  /Users/shanekennedy/Documents/elec490/modules/GEL/examples/GLFW/03-GEL-duck/tetgen.h \
+  /Users/shanekennedy/Documents/elec490/modules/GEL/examples/GLFW/03-GEL-duck/cMaterial.h \
   ../../extras/GLFW/include/GLFW/glfw3.h

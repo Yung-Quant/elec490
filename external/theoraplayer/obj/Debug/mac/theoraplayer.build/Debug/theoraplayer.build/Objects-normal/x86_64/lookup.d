@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/EmilyHeffernan/Desktop/elec490/external/theoraplayer/external/vorbis/lib/lookup.c \
+  /Users/shanekennedy/Documents/elec490/external/theoraplayer/external/vorbis/lib/lookup.c \
   external/vorbis/lib/lookup.h external/vorbis/lib/lookup_data.h \
   external/vorbis/lib/os.h external/ogg/include/ogg/os_types.h \
   external/vorbis/lib/misc.h external/vorbis/include/vorbis/codec.h \

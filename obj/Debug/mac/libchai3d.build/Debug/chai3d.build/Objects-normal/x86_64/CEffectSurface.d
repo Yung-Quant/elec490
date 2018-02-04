@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/EmilyHeffernan/Desktop/elec490/src/effects/CEffectSurface.cpp \
+  /Users/shanekennedy/Documents/elec490/src/effects/CEffectSurface.cpp \
   src/effects/CEffectSurface.h src/effects/CGenericEffect.h \
   src/math/CVector3d.h src/system/CString.h src/system/CGlobals.h \
   src/math/CConstants.h external/Eigen/Eigen/Eigen \

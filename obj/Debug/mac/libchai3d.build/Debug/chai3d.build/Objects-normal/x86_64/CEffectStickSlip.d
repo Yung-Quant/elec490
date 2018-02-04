@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/EmilyHeffernan/Desktop/elec490/src/effects/CEffectStickSlip.cpp \
+  /Users/shanekennedy/Documents/elec490/src/effects/CEffectStickSlip.cpp \
   src/effects/CEffectStickSlip.h src/effects/CGenericEffect.h \
   src/math/CVector3d.h src/system/CString.h src/system/CGlobals.h \
   src/math/CConstants.h external/Eigen/Eigen/Eigen \

@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/EmilyHeffernan/Desktop/elec490/src/devices/CDeltaDevices.cpp \
+  /Users/shanekennedy/Documents/elec490/src/devices/CDeltaDevices.cpp \
   src/system/CGlobals.h src/devices/CDeltaDevices.h \
   src/devices/CGenericHapticDevice.h src/devices/CGenericDevice.h \
   src/math/CConstants.h external/Eigen/Eigen/Eigen \

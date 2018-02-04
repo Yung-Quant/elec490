@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/EmilyHeffernan/Desktop/elec490/src/files/CFileAudioWAV.cpp \
+  /Users/shanekennedy/Documents/elec490/src/files/CFileAudioWAV.cpp \
   src/files/CFileAudioWAV.h src/math/CConstants.h src/system/CGlobals.h \
   external/Eigen/Eigen/Eigen external/Eigen/Eigen/Dense \
   external/Eigen/Eigen/Core \

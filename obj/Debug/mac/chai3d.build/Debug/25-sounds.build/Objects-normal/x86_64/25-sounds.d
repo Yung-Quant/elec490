@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/EmilyHeffernan/Desktop/elec490/examples/GLFW/25-sounds/25-sounds.cpp \
+  /Users/shanekennedy/Documents/elec490/examples/GLFW/25-sounds/25-sounds.cpp \
   src/chai3d.h src/audio/CAudioBuffer.h src/math/CMaths.h \
   src/math/CTransform.h src/math/CMatrix3d.h src/math/CConstants.h \
   src/system/CGlobals.h external/Eigen/Eigen/Eigen \

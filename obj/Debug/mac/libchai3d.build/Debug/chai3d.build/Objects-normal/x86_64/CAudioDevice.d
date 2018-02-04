@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/EmilyHeffernan/Desktop/elec490/src/audio/CAudioDevice.cpp \
+  /Users/shanekennedy/Documents/elec490/src/audio/CAudioDevice.cpp \
   external/openal/include/AL/al.h external/openal/include/AL/alc.h \
   src/audio/CAudioDevice.h src/audio/CAudioBuffer.h src/math/CMaths.h \
   src/math/CTransform.h src/math/CMatrix3d.h src/math/CConstants.h \

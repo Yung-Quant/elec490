@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/EmilyHeffernan/Desktop/elec490/src/graphics/CSegmentArray.cpp \
+  /Users/shanekennedy/Documents/elec490/src/graphics/CSegmentArray.cpp \
   src/graphics/CSegmentArray.h src/graphics/CGenericArray.h \
   src/math/CGeometry.h src/math/CPolySolver.h src/math/CMaths.h \
   src/math/CTransform.h src/math/CMatrix3d.h src/math/CConstants.h \

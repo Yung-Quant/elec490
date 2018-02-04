@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/EmilyHeffernan/Desktop/elec490/external/theoraplayer/external/vorbis/lib/psy.c \
+  /Users/shanekennedy/Documents/elec490/external/theoraplayer/external/vorbis/lib/psy.c \
   external/vorbis/include/vorbis/codec.h external/ogg/include/ogg/ogg.h \
   external/ogg/include/ogg/os_types.h \
   external/vorbis/lib/codec_internal.h external/vorbis/lib/envelope.h \

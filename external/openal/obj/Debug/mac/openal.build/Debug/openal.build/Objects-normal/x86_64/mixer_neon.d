@@ -1,2 +1,2 @@
 dependencies: \
-  /Users/EmilyHeffernan/Desktop/elec490/external/openal/Alc/mixer_neon.c
+  /Users/shanekennedy/Documents/elec490/external/openal/Alc/mixer_neon.c

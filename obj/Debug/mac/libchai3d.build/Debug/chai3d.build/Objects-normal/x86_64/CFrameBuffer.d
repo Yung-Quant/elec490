@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/EmilyHeffernan/Desktop/elec490/src/display/CFrameBuffer.cpp \
+  /Users/shanekennedy/Documents/elec490/src/display/CFrameBuffer.cpp \
   src/display/CFrameBuffer.h src/graphics/CImage.h src/graphics/CColor.h \
   src/math/CMaths.h src/math/CTransform.h src/math/CMatrix3d.h \
   src/math/CConstants.h src/system/CGlobals.h external/Eigen/Eigen/Eigen \

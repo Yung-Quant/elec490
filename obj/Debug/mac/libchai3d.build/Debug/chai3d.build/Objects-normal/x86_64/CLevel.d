@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/EmilyHeffernan/Desktop/elec490/src/widgets/CLevel.cpp \
+  /Users/shanekennedy/Documents/elec490/src/widgets/CLevel.cpp \
   src/widgets/CLevel.h src/widgets/CGenericWidget.h src/world/CMesh.h \
   src/world/CGenericObject.h src/collisions/CCollisionBasics.h \
   src/math/CVector3d.h src/system/CString.h src/system/CGlobals.h \

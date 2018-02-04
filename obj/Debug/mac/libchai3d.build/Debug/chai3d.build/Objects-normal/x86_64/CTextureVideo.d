@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/EmilyHeffernan/Desktop/elec490/src/materials/CTextureVideo.cpp \
+  /Users/shanekennedy/Documents/elec490/src/materials/CTextureVideo.cpp \
   src/materials/CTextureVideo.h src/materials/CTexture2d.h \
   src/graphics/CColor.h src/math/CMaths.h src/math/CTransform.h \
   src/math/CMatrix3d.h src/math/CConstants.h src/system/CGlobals.h \

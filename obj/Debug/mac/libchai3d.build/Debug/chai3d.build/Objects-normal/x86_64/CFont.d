@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/EmilyHeffernan/Desktop/elec490/src/graphics/CFont.cpp \
+  /Users/shanekennedy/Documents/elec490/src/graphics/CFont.cpp \
   src/graphics/CFont.h src/system/CGlobals.h src/materials/CTexture2d.h \
   src/graphics/CColor.h src/math/CMaths.h src/math/CTransform.h \
   src/math/CMatrix3d.h src/math/CConstants.h external/Eigen/Eigen/Eigen \

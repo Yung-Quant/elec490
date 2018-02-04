@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/EmilyHeffernan/Desktop/elec490/src/world/CShapeLine.cpp \
+  /Users/shanekennedy/Documents/elec490/src/world/CShapeLine.cpp \
   src/world/CShapeLine.h src/world/CGenericObject.h \
   src/collisions/CCollisionBasics.h src/math/CVector3d.h \
   src/system/CString.h src/system/CGlobals.h src/math/CConstants.h \

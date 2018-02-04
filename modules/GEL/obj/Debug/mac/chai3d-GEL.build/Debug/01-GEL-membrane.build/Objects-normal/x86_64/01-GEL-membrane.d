@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/EmilyHeffernan/Desktop/elec490/modules/GEL/examples/GLFW/01-GEL-membrane/01-GEL-membrane.cpp \
+  /Users/shanekennedy/Documents/elec490/modules/GEL/examples/GLFW/01-GEL-membrane/01-GEL-membrane.cpp \
   ../../src/chai3d.h ../../src/audio/CAudioBuffer.h \
   ../../src/math/CMaths.h ../../src/math/CTransform.h \
   ../../src/math/CMatrix3d.h ../../src/math/CConstants.h \

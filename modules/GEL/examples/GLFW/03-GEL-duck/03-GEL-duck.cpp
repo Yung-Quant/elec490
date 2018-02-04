@@ -108,6 +108,13 @@ double cursorWorkspaceRadius;
 
 // a label to display the rate [Hz] at which the simulation is running
 cLabel* labelRates;
+cLabel* labelForce;
+
+//global force variables
+cVector3d toolForce;
+
+//level widget to display interaction forces
+cLevel* level;
 
 // flag to indicate if the haptic simulation currently running
 bool simulationRunning = false;
@@ -616,9 +623,16 @@ int main(int argc, char* argv[])
     cFontPtr font = NEW_CFONTCALIBRI20();
 
     // create a label to display the haptic and graphic rate of the simulation
+    labelForce = new cLabel(font);
     labelRates = new cLabel(font);
     camera->m_frontLayer->addChild(labelRates);
+    camera->m_frontLayer->addChild(labelForce);
+    labelForce->m_fontColor.setWhite();
     labelRates->m_fontColor.setWhite();
+    level = new cLevel();
+    camera->m_frontLayer->addChild(level);
+    level->setLocalPos(100,0,0);
+    level->setRange(0.0, 50.0);
 
     // create a background
     cBackground* background = new cBackground();
@@ -817,7 +831,7 @@ bool createSkeletonMesh(cGELMesh *a_object, char *a_filename, char *a_filenameHi
         }
 
         // setup default values for links
-        cGELSkeletonLink::s_default_kSpringElongation = 10.0; // [N/m] was 50
+        cGELSkeletonLink::s_default_kSpringElongation = 0.25; // [N/m] was 50
         cGELSkeletonLink::s_default_kSpringFlexion    = 0.01;   // [Nm/RAD]
         cGELSkeletonLink::s_default_kSpringTorsion    = 0.01;   // [Nm/RAD]
         cGELSkeletonLink::s_default_color.set(0.2, 0.2, 1.0);
@@ -969,10 +983,18 @@ void updateGraphics(void)
     // update haptic and graphic rate data
     labelRates->setText(cStr(freqCounterGraphics.getFrequency(), 0) + " Hz / " +
         cStr(freqCounterHaptics.getFrequency(), 0) + " Hz");
-
+    
+    //update labels
+    double magForce = sqrt(pow(toolForce(0),2) + pow(toolForce(1),2) + pow(toolForce(2),2));
+    string screenForce = "x: "+to_string((int)toolForce(0)) + " y: "+ to_string((int)toolForce(1)) + " z: " + to_string((int)toolForce(2));
+    labelForce->setText(screenForce + " ---> " + to_string((int)magForce)+ " NEWTONS");
+    
     // update position of label
     labelRates->setLocalPos((int)(0.5 * (width - labelRates->getWidth())), 15);
-
+    labelForce->setLocalPos((int)(0.5 * (width - labelForce->getWidth())), 40);
+    
+    // update value of level
+    level->setValue(magForce);
 
     /////////////////////////////////////////////////////////////////////
     // UPDATE DEFORMABLE MODELS
@@ -1036,7 +1058,7 @@ void updateHaptics(void)
         device->setLocalPos(pos);
 
         // compute reaction forces
-        cVector3d force(0.0, 0.0, 0.0);
+        ///cVector3d toolForce(0.0, 0.0, 0.0);
 
         // compute reaction forces
         list<cGELMesh*>::iterator i;
@@ -1055,13 +1077,13 @@ void updateHaptics(void)
 
                    double forceWave = 0.001 * sin(1.0 * (time + nodePos.x() + nodePos.y()));
 
-                   cVector3d force = cVector3d(-0.002 * nodePos.x(), -0.002 * nodePos.y(), forceWave);
+                   cVector3d toolForce = cVector3d(-0.002 * nodePos.x(), -0.002 * nodePos.y(), forceWave);
                    if (nodePos.z() < groundLevel)
                    {
                         double depth = nodePos.z() - groundLevel;
-                        force.add(cVector3d(0,0,-100*depth));
+                        toolForce.add(cVector3d(0,0,-100*depth));
                    }
-                   nextItem->m_gelVertices[i].m_massParticle->setExternalForce(force);
+                   nextItem->m_gelVertices[i].m_massParticle->setExternalForce(toolForce);
                 }
             }
 
@@ -1073,19 +1095,19 @@ void updateHaptics(void)
                     cGELSkeletonNode* node = *i;
                     cVector3d nodePos = node->m_pos;
                     double radius = node->m_radius;
-                    cVector3d force = cVector3d(-0.01 * nodePos.x(), -0.01 * (nodePos.y()), 0.0);
+                    toolForce = cVector3d(-0.01 * nodePos.x(), -0.01 * (nodePos.y()), 0.0);
 
                     if ((nodePos.z()-radius) < groundLevel)
                     {
                         double depth = (nodePos.z()-radius) - groundLevel;
-                        force.add(cVector3d(0,0,-1.0 * depth));
+                        toolForce.add(cVector3d(0,0,-1.0 * depth));
                         node->m_vel.mul(0.95);
                     }
 
                     double forceWave = 0.001 * sin(time);
-                    force.add(0.0, forceWave, 0.0);
+                    toolForce.add(0.0, forceWave, 0.0);
 
-                    node->setExternalForce(force);
+                    node->setExternalForce(toolForce);
                 }
             }
         }
@@ -1107,7 +1129,7 @@ void updateHaptics(void)
                     cVector3d tmpfrc = cNegate(f);
                     nextItem->m_gelVertices[i].m_massParticle->setExternalForce(tmpfrc);
                 }
-                force.add(cMul(1.0, f));
+                toolForce.add(cMul(1.0, f));
                 }
             }
 
@@ -1125,7 +1147,7 @@ void updateHaptics(void)
                         cVector3d tmpfrc = cNegate(f);
                         node->setExternalForce(tmpfrc);
                     }
-                    force.add(cMul(4.0, f));
+                    toolForce.add(cMul(4.0, f));
                 }
             }
         }
@@ -1133,8 +1155,8 @@ void updateHaptics(void)
         // integrate dynamics
         defWorld->updateDynamics(interval);
 
-        // scale force
-        force.mul(deviceForceScale);
+        // scale toolForce
+        toolForce.mul(deviceForceScale);
 
         // water viscosity
         if ((pos.z() - deviceRadius) < groundLevel)
@@ -1152,13 +1174,13 @@ void updateHaptics(void)
             double val = (groundLevel - (pos.z() - deviceRadius)) / (2.0 * deviceRadius);
             double scale = cClamp(val, 0.1, 1.0);
 
-            // compute force
+            // compute toolForce
             cVector3d forceDamping = cMul(-Kv * scale, linearVelocity);
-            force.add(forceDamping);
+            toolForce.add(forceDamping);
         }
 
         // send forces to haptic device
-        hapticDevice->setForce(force);
+        hapticDevice->setForce(toolForce);
 
         // update frequency counter
         freqCounterHaptics.signal(1);

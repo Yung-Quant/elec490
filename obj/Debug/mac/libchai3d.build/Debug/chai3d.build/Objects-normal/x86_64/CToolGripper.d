@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/EmilyHeffernan/Desktop/elec490/src/tools/CToolGripper.cpp \
+  /Users/shanekennedy/Documents/elec490/src/tools/CToolGripper.cpp \
   src/tools/CToolGripper.h src/tools/CGenericTool.h \
   src/collisions/CGenericCollision.h src/collisions/CCollisionBasics.h \
   src/math/CVector3d.h src/system/CString.h src/system/CGlobals.h \

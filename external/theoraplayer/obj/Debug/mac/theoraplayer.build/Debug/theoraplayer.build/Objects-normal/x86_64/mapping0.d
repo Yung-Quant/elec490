@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/EmilyHeffernan/Desktop/elec490/external/theoraplayer/external/vorbis/lib/mapping0.c \
+  /Users/shanekennedy/Documents/elec490/external/theoraplayer/external/vorbis/lib/mapping0.c \
   external/ogg/include/ogg/ogg.h external/ogg/include/ogg/os_types.h \
   external/vorbis/include/vorbis/codec.h \
   external/vorbis/lib/codec_internal.h external/vorbis/lib/envelope.h \

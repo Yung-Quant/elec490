@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/EmilyHeffernan/Desktop/elec490/src/lighting/CPositionalLight.cpp \
+  /Users/shanekennedy/Documents/elec490/src/lighting/CPositionalLight.cpp \
   src/lighting/CPositionalLight.h src/lighting/CGenericLight.h \
   src/graphics/CColor.h src/math/CMaths.h src/math/CTransform.h \
   src/math/CMatrix3d.h src/math/CConstants.h src/system/CGlobals.h \

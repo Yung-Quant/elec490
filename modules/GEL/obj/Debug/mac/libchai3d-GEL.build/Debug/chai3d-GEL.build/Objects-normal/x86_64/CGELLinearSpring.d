@@ -1,7 +1,7 @@
 dependencies: \
-  /Users/EmilyHeffernan/Desktop/elec490/modules/GEL/src/CGELLinearSpring.cpp \
+  /Users/shanekennedy/Documents/elec490/modules/GEL/src/CGELLinearSpring.cpp \
   src/CGELLinearSpring.h src/CGELMassParticle.h \
-  /Users/EmilyHeffernan/Desktop/elec490/modules/GEL/../../src/chai3d.h \
+  /Users/shanekennedy/Documents/elec490/modules/GEL/../../src/chai3d.h \
   ../../src/audio/CAudioBuffer.h ../../src/math/CMaths.h \
   ../../src/math/CTransform.h ../../src/math/CMatrix3d.h \
   ../../src/math/CConstants.h ../../src/system/CGlobals.h \

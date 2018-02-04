@@ -1,4 +1,4 @@
 dependencies: \
-  /Users/EmilyHeffernan/Desktop/elec490/external/lib3ds/src/lib3ds_atmosphere.c \
-  /Users/EmilyHeffernan/Desktop/elec490/external/lib3ds/include/lib3ds_impl.h \
+  /Users/shanekennedy/Documents/elec490/external/lib3ds/src/lib3ds_atmosphere.c \
+  /Users/shanekennedy/Documents/elec490/external/lib3ds/include/lib3ds_impl.h \
   include/lib3ds.h

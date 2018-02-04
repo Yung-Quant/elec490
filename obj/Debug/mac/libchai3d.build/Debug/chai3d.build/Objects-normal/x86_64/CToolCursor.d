@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/EmilyHeffernan/Desktop/elec490/src/tools/CToolCursor.cpp \
+  /Users/shanekennedy/Documents/elec490/src/tools/CToolCursor.cpp \
   src/tools/CToolCursor.h src/tools/CGenericTool.h \
   src/collisions/CGenericCollision.h src/collisions/CCollisionBasics.h \
   src/math/CVector3d.h src/system/CString.h src/system/CGlobals.h \

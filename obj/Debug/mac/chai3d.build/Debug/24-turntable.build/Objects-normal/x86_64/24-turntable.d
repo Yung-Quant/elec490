@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/EmilyHeffernan/Desktop/elec490/examples/GLFW/24-turntable/24-turntable.cpp \
+  /Users/shanekennedy/Documents/elec490/examples/GLFW/24-turntable/24-turntable.cpp \
   src/chai3d.h src/audio/CAudioBuffer.h src/math/CMaths.h \
   src/math/CTransform.h src/math/CMatrix3d.h src/math/CConstants.h \
   src/system/CGlobals.h external/Eigen/Eigen/Eigen \

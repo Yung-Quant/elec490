@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/EmilyHeffernan/Desktop/elec490/src/shaders/CShader.cpp \
+  /Users/shanekennedy/Documents/elec490/src/shaders/CShader.cpp \
   src/shaders/CShader.h src/system/CGlobals.h src/system/CString.h \
   src/math/CConstants.h external/Eigen/Eigen/Eigen \
   external/Eigen/Eigen/Dense external/Eigen/Eigen/Core \
