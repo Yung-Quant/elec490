@@ -441,143 +441,10 @@ int main(int argc, char* argv[])
     defWorld = new cGELWorld();
     world->addChild(defWorld);
 
-
-    /////////////////////////////////////////////////////////////////////////
-    // COMPOSE WATER BED
-    /////////////////////////////////////////////////////////////////////////
-/*
-    // create GEL mesh object
-    ground = new cGELMesh();
-
-    // add mesh to dynamic world
-    defWorld->m_gelMeshes.push_back(ground);
-
-    // enable particle model (mesh vertices)
-    ground->m_useMassParticleModel = true;
-
-    // set default physical properties for each mass node
-    cGELMassParticle::s_default_mass = 0.010;
-    cGELMassParticle::s_default_kDampingPos = 0.4;
-    cGELMassParticle::s_default_gravity.set(0,0,0);
-
-    // create mesh object
-    cMesh* mesh = ground->newMesh();
-
-    // create a array of polygons that simulate water
-    int RESOLUTION = 15;
-    double SIZE = 5.0;
-    for (int v=0; v<RESOLUTION; v++)
-    {
-        for (int u=0; u<RESOLUTION; u++)
-        {
-            double px, py, tu, tv;
-
-            // compute the position of the vertex
-            px = SIZE / (double)RESOLUTION * (double)u - (SIZE/2.0);
-            py = SIZE / (double)RESOLUTION * (double)v - (SIZE/2.0);
-
-            // create new vertex
-            unsigned int index = mesh->newVertex(px, py, groundLevel);
-
-            // compute texture coordinate
-            tu = (double)u / (double)RESOLUTION;
-            tv = (double)v / (double)RESOLUTION;
-            mesh->m_vertices->setTexCoord(index, tu, tv);
-            mesh->m_vertices->setColor(index, cColorf(1.0, 0.0, 0.1));
-        }
-    }
-    
-    // build particles for each vertex
-    ground->buildVertices();
-
-    // set all particle at edge of map as fixed
-    for (int v=0; v<RESOLUTION; v++)
-    {
-        for (int u=0; u<RESOLUTION; u++)
-        {
-            //if ((u == 0) || (v == 0) || (u == (RESOLUTION-1)) || (v == (RESOLUTION-1)))
-            //{
-                unsigned int index = ((v + 0) * RESOLUTION) + (u + 0);
-                ground->m_gelVertices[index].m_massParticle->m_fixed = true;
-            //}
-        }
-    }
-
-    // set default physical properties for spring
-    cGELLinearSpring::s_default_kSpringElongation = 10.0; // [N/m]
-    
-    // create springs between particles
-    for (int v=0; v<(RESOLUTION-1); v++)
-    {
-        for (int u=0; u<(RESOLUTION-1); u++)
-        {
-            // get the indexing numbers of the next four vertices
-            unsigned int index00 = ((v + 0) * RESOLUTION) + (u + 0);
-            unsigned int index01 = ((v + 0) * RESOLUTION) + (u + 1);
-            unsigned int index10 = ((v + 1) * RESOLUTION) + (u + 0);
-            unsigned int index11 = ((v + 1) * RESOLUTION) + (u + 1);
-
-            // create two new triangles
-            mesh->newTriangle(index00, index01, index10);
-            mesh->newTriangle(index10, index01, index11);
-
-            cGELMassParticle* m0 = ground->m_gelVertices[index00].m_massParticle;
-            cGELMassParticle* m1 = ground->m_gelVertices[index01].m_massParticle;
-            cGELMassParticle* m2 = ground->m_gelVertices[index10].m_massParticle;
-            cGELMassParticle* m3 = ground->m_gelVertices[index11].m_massParticle;
-
-            cGELLinearSpring* spring0 = new cGELLinearSpring(m0, m1);
-            cGELLinearSpring* spring1 = new cGELLinearSpring(m0, m2);
-            ground->m_linearSprings.push_back(spring0);
-            ground->m_linearSprings.push_back(spring1);
-
-            if ((u == (RESOLUTION-2)) || (v == (RESOLUTION-2)))
-            {
-                cGELLinearSpring* spring2 = new cGELLinearSpring(m3, m1);
-                cGELLinearSpring* spring3 = new cGELLinearSpring(m3, m2);
-                ground->m_linearSprings.push_back(spring2);
-                ground->m_linearSprings.push_back(spring3);
-            }
-        }
-    }
-
-    // ajust material and transparency
-    ground->setUseMaterial(true);
-    ground->m_material->setGrayLevel(0.1);
-    ground->setTransparencyLevel(0.7);
-    ground->setUseTransparency(true);
-
-    // create water texture
-    shared_ptr<cTexture2d> textureGround(new cTexture2d());
-    ground->setTexture(textureGround);
-    ground->setUseTexture(true, true);
-    
-    // load water texture
- */
     bool fileload;
-    /*
-    fileload = textureGround->loadFromFile(RESOURCE_PATH("../resources/images/water.jpg"));
-    if (!fileload)
-    {
-        #if defined(_MSVC)
-        fileload = textureGround->loadFromFile("../../../bin/resources/images/water.jpg" );
-        #endif
-        if (!fileload)
-        {
-            cout << "Error - 3D Model failed to load correctly." << endl;
-            close();
-            return (-1);
-        }
-    }
- 
-
-    // enable environmental texturing
-    textureGround->setEnvironmentMode(GL_DECAL);
-    textureGround->setSphericalMappingEnabled(true);
- */
 
     /////////////////////////////////////////////////////////////////////////
-    // CREATE DUCK
+    // Render Breast model
     /////////////////////////////////////////////////////////////////////////
 
     // create a deformable mesh
@@ -600,20 +467,6 @@ int main(int argc, char* argv[])
             return (-1);
         }
     }
-    /*
-    defObject->m_texture = cTexture2d::create();
-    defObject->setUseTexture(true);
-    fileload = defObject->m_texture->loadFromFile(RESOURCE_PATH("../resources/images/boobPic.png"));
-    if (!fileload)
-    {
-#if defined(_MSVC)
-        fileload = defObject->m_texture->loadFromFile("../../../bin/resources/images/boobPic.png");
-#endif
-    }
-    
-    defObject->m_texture = cTexture2d::create();
-    defObject->setUseTexture(true);
-    */
     
     //--------------------------------------------------------------------------
     // WIDGETS
